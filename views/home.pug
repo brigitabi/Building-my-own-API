@@ -1,0 +1,22 @@
+html
+  head
+    link(rel='stylesheet', href='/styles.css')
+  body
+    block content
+
+    // Rest of your Pug template
+
+block content
+  h1 ChatGPT News API
+
+  .articles
+    each article, index in articles
+      .article
+        h3= article.title
+        a(href=article.url)= article.url
+        p.date= article.date
+
+        // Add a line after each article except the last one
+        if index !== articles.length - 1
+          .article-line
+

@@ -2,7 +2,9 @@ const PORT = process.env.PORT || 8090
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
+const path = require('path')
 const app = express()
+const pug = require('pug')
 
 const newspapers = [
     {
@@ -44,6 +46,16 @@ const newspapers = [
         name: 'IndianExpress', 
         address: 'https://indianexpress.com/section/technology/', 
         base: ''
+    }, 
+    {
+        name: 'BATimes', 
+        address: 'https://www.batimes.com.ar/topics/technology', 
+        base: ''
+    }, 
+    { 
+        name: 'Vox', 
+        address: 'https://www.vox.com/technology', 
+        base: ''
     }
 ]
 
@@ -70,12 +82,16 @@ newspapers.forEach(newspaper => {
         })
 })
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.set('view engine', 'pug')
+
 app.get('/', (req, res) => {
     res.json('Welcome to my ChatGPT News API')
 })
 
 app.get('/news', (req, res) => { 
-    res.json(articles)
+    res.render('home', {articles})
 })
 
 app.get('/news/:newspaperId', (req, res) => { 
@@ -93,9 +109,11 @@ app.get('/news/:newspaperId', (req, res) => {
             $('a:contains("ChatGPT")', html).each(function () { 
                 const title = $(this).text()
                 const url = $(this).attr('href')
+                const date = $(this).closest('.fc-item').find('.fc-item__timestamp').text();
                 specificArticles.push({ 
                     title, 
                     url: newspaperBase + url, 
+                    date,
                     source: newspaperId
                 })
             })
