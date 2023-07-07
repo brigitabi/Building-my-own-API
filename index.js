@@ -1,4 +1,4 @@
-const PORT = 8090
+const PORT = process.env.PORT || 8090
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -41,8 +41,8 @@ const newspapers = [
         base: ''
     }, 
     {
-        name: 'The Verge', 
-        address: 'https://www.theverge.com/',
+        name: 'IndianExpress', 
+        address: 'https://indianexpress.com/section/technology/', 
         base: ''
     }
 ]
@@ -78,7 +78,7 @@ app.get('/news', (req, res) => {
     res.json(articles)
 })
 
-app.get('/news/:newspaperId', async (req) => { 
+app.get('/news/:newspaperId', (req, res) => { 
     const newspaperId = req.params.newspaperId   
 
     const newspaperAddress = newspapers.filter(newspaper => newspaper.name == newspaperId)[0].address
@@ -100,7 +100,7 @@ app.get('/news/:newspaperId', async (req) => {
                 })
             })
             res.json(specificArticles)
-        }).catch(err = console.log(err))
+        }).catch(err => console.log(err))
 })
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
