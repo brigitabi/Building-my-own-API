@@ -43,7 +43,7 @@ const newspapers = [
         base: ''
     }, 
     {
-        name: 'IndianExpress', 
+        name: 'Indian Express', 
         address: 'https://indianexpress.com/section/technology/', 
         base: ''
     }, 
