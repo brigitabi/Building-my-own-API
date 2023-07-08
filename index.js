@@ -13,7 +13,7 @@ const newspapers = [
         base: ''
     }, 
     {
-        name: 'Guardian',
+        name: 'The Guardian',
         address: 'https://www.theguardian.com/technology/chatgpt', 
         base: ''
     },

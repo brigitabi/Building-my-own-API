@@ -9,7 +9,7 @@ Welcome to the ChatGPT News API! This API allows you to extract ChatGPT related 
 - The Economist
 - MIT Technology Review
 - Indian Express
-- BA Times
+- BATimes
 - Vox
 - Suddeutsche Zeitung
 - Le Figaro
@@ -21,12 +21,14 @@ This project has been inspired by Ania's YouTube tutorial: [Build and sell your 
 - JavaScript
 - Node.js
 - Express.js
-- Cheerio
-- Axios
-- npm
 - Heroku
 - Rapid API
 
+### Demo 
+
+![ChatGPT Related News API](public/ChatGPT Related News RapidAPI.png)
+
+See also ChatGPT Related News on Rapid API [here](https://rapidapi.com/brigitabizjak05/api/chatgpt-related-news/).
 ## Installation
 
 1. Clone the repository:
