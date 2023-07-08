@@ -26,9 +26,10 @@ This project has been inspired by Ania's YouTube tutorial: [Build and sell your 
 
 ### Demo 
 
-![ChatGPT Related News API](public/ChatGPT Related News RapidAPI.png)
+![ChatGPT Related News API](public/MyFirstAPI.png)
 
 See also ChatGPT Related News on Rapid API [here](https://rapidapi.com/brigitabizjak05/api/chatgpt-related-news/).
+
 ## Installation
 
 1. Clone the repository:
