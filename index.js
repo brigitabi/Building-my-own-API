@@ -56,6 +56,16 @@ const newspapers = [
         name: 'Vox', 
         address: 'https://www.vox.com/technology', 
         base: ''
+    }, 
+    {
+        name: 'SuddeutscheZeitung', 
+        address: 'https://www.sueddeutsche.de/thema/Chat_GPT', 
+        base: ''
+    }, 
+    { 
+        name: 'LeFigaro', 
+        address: 'https://www.lefigaro.fr/tag/chatgpt', 
+        base: ''
     }
 ]
 

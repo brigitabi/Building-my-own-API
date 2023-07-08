@@ -1,28 +1,44 @@
-.articles {
-    background-color: rgb(218, 109, 109);
-    color: black;
-    padding: 20px;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+body
+  style.
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: rgb(4, 68, 243);
+      margin: 0;
+    }
   
-  .article {
-    margin-bottom: 20px;
-  }
+    .articles {
+      background-color: rgb(218, 109, 109);
+      color: black;
+      padding: 20px;
+    }
   
-  h3 {
-    font-size: 20px;
-  }
+    .article {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: rgb(191, 210, 245);
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: #333;
+    }
   
-  a {
-    text-decoration: none;
-    color: blue;
-  }
+    h3 {
+      font-size: 20px;
+    }
   
-  p.date {
-    font-size: 12px;
-    color: gray;
-  }
+    a {
+      text-decoration: none;
+      color: blue;
+    }
   
-  .article-line {
-    border-bottom: 1px solid gray;
-    margin-bottom: 20px;
-  }
+    p.date {
+      font-size: 12px;
+      color: gray;
+    }
+  
+    .article-line {
+      border-bottom: 1px solid gray;
+      margin-bottom: 20px;
+    }
+
